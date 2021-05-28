@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Run image') {
       steps {
-        sh 'docker run -d -p 5000:5000 firstproject'
+        sh 'docker run -d -p 5000:5000 -v $(which docker):/usr/bin/docker firstproject'
       }
     }
     stage('testing') {
