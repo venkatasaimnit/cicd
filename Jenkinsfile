@@ -9,7 +9,6 @@ pipeline {
     }
     stage('build image') {
       steps {
-        sh 'sudo usermod -a -G docker jenkins' 
         sh 'sudo docker build -t firstproject .'
       }
     }
