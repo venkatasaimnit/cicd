@@ -9,12 +9,12 @@ pipeline {
     }
     stage('build image') {
       steps {
-        sh 'sudo docker build -t firstproject .'
+        sh 'docker build -t firstproject .'
       }
     }
     stage('Run image') {
       steps {
-        sh 'sudo docker run -d -p 5000:5000 firstproject'
+        sh 'docker run -d -p 5000:5000 firstproject'
       }
     }
     stage('testing') {
